@@ -1,0 +1,53 @@
+
+ <div class="home-container">
+  <!-- <header class="header" *ngIf="user">
+    <div class="user-info">
+      <p>👋 Welcome, <strong>{{ user.name }}</strong> (Flat {{ user.flatNo }})</p>
+      <button class="logout-btn" (click)="logout()">Logout</button>
+    </div>
+  </header> -->
+
+  <main class="main-content">
+    <!-- <h1>Welcome to Your Community App <span class="wave">👋</span></h1> -->
+    <!-- <p class="subtitle">Select a service to explore</p> -->
+
+<div class="header fade-in-up">
+  <h1 class="main-header">Discover What’s Around You with <span class="brand">Fyben</span></h1>
+  <p class="subtext">Together, let’s grow and support our community.</p>
+</div>
+
+
+
+
+    <div class="categories">
+      <div
+        class="category-card"
+        *ngFor="let cat of categories"
+        (click)="navigateToCategory(cat)"
+      >
+        <div class="card-image">
+          <img [src]="cat.image" alt="{{ cat.name }}" />
+        </div>
+        <div class="card-body">
+          <h3>{{ cat.name }}</h3>
+          <span [ngClass]="cat.status">{{ cat.availableText }}</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="app-footer">
+  <p>Created & Maintained by <b>Mahender Reddy Vutkuri</b> (A1903)</p>
+  <p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6ZNwwNjSINSDpaFqaiYfDEvavJmpDRIi3AJ6aNkFQxjSKVg/viewform
+    " target="_blank">
+      Want to register your business? Click here →
+    </a>
+  </p>
+   <p>
+    <a href="https://forms.gle/BRsxNULygpRaSQi9A
+    " target="_blank">
+      Want to share feedback/suggestions? Click here →
+    </a>
+  </p>
+</footer>

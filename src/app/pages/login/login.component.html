@@ -1,0 +1,29 @@
+<!-- <p>login works!</p>
+<div class="form-container">
+  <h2>Login</h2>
+
+  <input [(ngModel)]="phone" placeholder="Enter Phone Number" type="tel" />
+  <button (click)="login()">Login</button>
+
+  <p class="message">{{ message }}</p>
+  <p>
+    New user? <a routerLink="/register">Register here</a>
+  </p>
+</div> -->
+
+
+
+<div class="auth-container">
+  <h2>Welcome Back</h2>
+
+  <input [(ngModel)]="phone" type="text" placeholder="Phone Number" />
+  <input [(ngModel)]="password" type="password" placeholder="Password" />
+
+  <button (click)="login()">Login</button>
+
+  <p *ngIf="error" class="error">{{ error }}</p>
+
+  <p class="switch-text">
+    Don’t have an account? <a routerLink="/register">Register here</a>
+  </p>
+</div>

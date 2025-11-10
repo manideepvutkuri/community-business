@@ -129,6 +129,199 @@
   padding: 20px 50px;
 }
 
+/* Navigation Header */
+.navigation-header {
+  display: flex;
+  justify-content: end;
+  padding: 0px 0px;
+  // margin-bottom: 20px;
+  
+  .vendors-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 6px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Browser Notice for Chrome iOS */
+.browser-notice {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  animation: slideDown 0.4s ease-out;
+  
+  .notice-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    .notice-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    
+    p {
+      margin: 0;
+      color: #856404;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      
+      strong {
+        color: #664d03;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* PWA Install Prompt */
+.install-prompt {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  animation: slideUp 0.5s ease-out;
+  max-width: 400px;
+  width: calc(100% - 40px);
+}
+
+.install-content {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+  
+  .install-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    margin: 10px 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  
+  p {
+    margin: 10px 0 20px;
+    opacity: 0.9;
+    font-size: 0.95rem;
+  }
+  
+  .install-btn {
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  
+  .ios-instructions {
+    text-align: left;
+    
+    ol {
+      margin: 15px 0;
+      padding-left: 20px;
+      text-align: left;
+      
+      li {
+        margin: 10px 0;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+    }
+    
+    .ios-icon {
+      display: inline-block;
+      font-size: 1.2rem;
+      vertical-align: middle;
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(-50%) translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
 /* Header */
 .header {
   display: flex;
@@ -221,16 +414,16 @@
   width: 100%;
   // height: 140px;
   height: 103px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card-body {
-  padding: 15px;
+  padding: 8px;
 }
 
 .card-body h3 {
-  margin: 10px 0 5px;
-  font-size: 1.1rem;
+  margin: 5px;
+  font-size: 14px;
   font-weight: 600;
   color: #333;
 }
@@ -243,6 +436,7 @@
   padding: 4px 10px;
   border-radius: 8px;
   color: white;
+  text-transform: capitalize;
 }
 
 .open, .available {
@@ -284,6 +478,15 @@
   .header {
     justify-content: center;
   }
+  
+  .navigation-header {
+    justify-content: end;
+    
+    .vendors-link {
+      font-size: 0.9rem;
+      padding: 6px 6px;
+    }
+  }
 }
 
 
@@ -322,7 +525,7 @@
   line-height: 1.4;
 }
 
-.header .brand {
+.brand {
   color: #00b894;
 }
 .main-header{
@@ -333,7 +536,7 @@
   color: #555;
   font-style: italic;
   margin: 0;
-  max-width: 280px;
+  // max-width: 280px;
   text-align: center;
   line-height: 1.5;
 }

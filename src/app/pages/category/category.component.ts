@@ -28,9 +28,9 @@ export class CategoryComponent {
         status: 'open',
         owner: 'Zareena',
         flat: 'B2101',
-        phone: '9999999999',
+        phone: '+918888826606',
         whatsapp:
-          'https://wa.me/9999999999?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+          'https://wa.me/+918888826606?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
         description:
           'Home made food without preservatives. Fresh and delicious meals every day.',
         fullMessage: `Great Day everyone! 🌞
@@ -179,9 +179,9 @@ Thank you all for your continued love and support! ❤️`,
         whatsapp:
           'https://wa.me/+919618076809?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
         items: [
-          { name: 'Spicy Peanut Powder (100g)', price: 65 },
-          { name: 'Gongura Pachadi (250g)', price: 50 },
-          { name: 'Birakaya Tomato Pachadi (200g)', price: 50 },
+          { name: 'Spicy Peanut Powder (100g)', price: '₹65' },
+          { name: 'Gongura Pachadi (250g)', price: '₹50' },
+          { name: 'Birakaya Tomato Pachadi (200g)', price: '₹50' },
         ],
       },
     ],
@@ -215,6 +215,28 @@ Thank you all for your continued love and support! ❤️`,
         phone: '9908433111',
         whatsapp:
           'https://wa.me/+919908433111?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+      },
+      {
+        name: 'Yuva Interiors',
+        status: 'open',
+        owner: 'Sandeep',
+        flat: 'A2803',
+        description:
+          'Modular kitchen, fall ceiling , wardrobe, interior, furnitures and all home solutions at affordable prices.',
+        phone: '9949833083',
+        instagram: 'https://www.instagram.com/yuva_interio__2013/',
+        whatsapp:
+          'https://wa.me/+919949833083?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+      },
+      {
+        name: 'Praveen Interiors',
+        status: 'open',
+        owner: 'Praveen',
+        flat: 'A2108',
+        description: 'End to End Interior Solution for your dream Home. ',
+        phone: '9844503981',
+        whatsapp:
+          'https://wa.me/+919844503981?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
       },
     ],
     Travel: [
@@ -255,7 +277,7 @@ Thank you all for your continued love and support! ❤️`,
         description: 'We offer the best organic oils.Purity is our motto',
         phone: '9908284469',
         whatsapp:
-          'https://wa.me/9908284469?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+          'https://wa.me/919908284469?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
         instagram: '',
         website: '',
         items: [
@@ -281,19 +303,19 @@ Thank you all for your continued love and support! ❤️`,
           'https://wa.me/+919010073040?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
         instagram:
           'https://instagram.com/x.thebakershouse?utm_medium=copy_link',
-          items: [
-          { name: 'Cakes for all occasion',  },
-          { name: 'Cookies',  },
-          { name: 'Donuts',  },
-          { name: 'Pinata Cake',  },
-          { name: 'Snacks Box',  },
-          { name: 'Corporate Orders',  },
+        items: [
+          { name: 'Cakes for all occasion' },
+          { name: 'Cookies' },
+          { name: 'Donuts' },
+          { name: 'Pinata Cake' },
+          { name: 'Snacks Box' },
+          { name: 'Corporate Orders' },
         ],
       },
     ],
     Insurance: [
       {
-        name: "The New India Assurance Co. Ltd",
+        name: 'The New India Assurance Co. Ltd',
         status: 'open',
         owner: 'N Sri Jyothirmai',
         flat: 'B1302',
@@ -303,14 +325,14 @@ Thank you all for your continued love and support! ❤️`,
         whatsapp:
           'https://wa.me/+919966535171?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
 
-          items: [
-          { name: 'Motor Insurance',  },
-          { name: 'Health Insurance',  },
-          { name: 'Home Insurance',  },
-          { name: 'Property Insurance',  },
-          { name: 'Shop Insurance',  },
-          { name: 'Office Insurance',  },
-          { name: 'Personal Accident Insurance',  },
+        items: [
+          { name: 'Motor Insurance' },
+          { name: 'Health Insurance' },
+          { name: 'Home Insurance' },
+          { name: 'Property Insurance' },
+          { name: 'Shop Insurance' },
+          { name: 'Office Insurance' },
+          { name: 'Personal Accident Insurance' },
         ],
       },
     ],
@@ -320,12 +342,128 @@ Thank you all for your continued love and support! ❤️`,
         status: 'open',
         owner: 'Kurukuri Tharuni',
         flat: 'A1605',
-        description:
-          'Parking is available for Rent @100rs/- per day',
+        description: 'Parking is available for Rent @100rs/- per day',
         phone: '9494200690',
         whatsapp:
           'https://wa.me/9494200690?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
-      }
+      },
+    ],
+    Handlooms: [
+      {
+        name: 'Adolescent Handlooms',
+        status: 'open',
+        owner: 'Hatakesh',
+        flat: 'A1008',
+        description:
+          'Khadi Jamdani Sarees manufacturer from Srikakulam. Prepare full range of Khadi products like Sarees, Dupattas, Dhotis etc.',
+        phone: '9866498008',
+        whatsapp:
+          'https://wa.me/919866498008?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+        instagram: 'https://www.instagram.com/pondurukhadijamdanisarees/',
+        website: '',
+        items: [
+          { name: 'Khadi Sarees' },
+          { name: 'Khadi Dupattas' },
+          { name: 'Khadi Dhotis' },
+        ],
+      },
+    ],
+    Blooddonars: [
+      {
+        name: 'Community Blood Donors',
+        description:
+          "Here's a list of community members who have generously volunteered to donate blood in times of need.",
+        items: [
+          { name: 'Mahender Reddy Vutkuri (9010161680)', price: ['B +ve'] },
+        ],
+      },
+    ],
+    CateringServices: [
+      {
+        name: 'Madhavi Catering Services',
+        status: 'open',
+        owner: 'Kosuri Avinash',
+        flat: 'B3502',
+        description:
+          'Madhavi Catering Services offers a variety of catering options for all occasions, including weddings, parties, and corporate events.',
+        phone: '8790738285',
+        whatsapp:
+          'https://wa.me/918790738285?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+        items: [
+          { name: 'Veg Catering' },
+          { name: 'Non-Veg Catering' },
+          { name: 'Desserts' },
+        ],
+      },
+    ],
+    ClothingAndFashion: [
+      {
+        name: 'Prem Enterprises',
+        status: 'open',
+        owner: 'Kamlesh kumar',
+        flat: 'B402',
+        description:
+          'We provide Clothing and fashion accessories at good quality.We sell below items at reasonable prices.',
+        phone: '8374220766',
+        whatsapp:
+          'https://wa.me/918374220766?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+        website: '',
+        items: [
+          { name: 'sarees' },
+          { name: 'kurtis' },
+          { name: 'bedsheets' },
+          { name: 'towels' },
+          { name: 'doormats' },
+          { name: 'women dresses n other clothings' },
+          { name: 'assecories fashion' },
+        ],
+      },
+      {
+        name: 'Ethnic Couture',
+        status: 'open',
+        owner: 'Deepthi',
+        flat: 'A902',
+        description: 'We are specialized in clothing, Kurtis, 3 piece sets etc.,',
+        phone: '7396774569',
+        whatsapp:
+          'https://wa.me/917396774569?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+        website: '',
+        instagram: 'https://www.instagram.com/Ethniccouture9/',
+        items: [
+          { name: 'Kurtis' },
+          { name: '3 piece sets' },
+          { name: '2 piece sets' },
+          { name: 'mul frocks' },
+        ],
+      },
+    ],
+    UsedVehicles: [
+      {
+        name: 'Auto Aesthetics ',
+        status: 'open',
+        owner: 'Ashwin ',
+        flat: 'A908',
+        description:
+          'Buying and selling cars at best prices.We deal with all brands of cars.',
+        phone: '9989993003',
+        whatsapp:
+          'https://wa.me/919989993003?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+      },
+    ],
+    GiftingCorner: [
+      {
+        name: 'Milkars Gifting',
+        status: 'open',
+        owner: 'Priyadarshini Mily Panda ',
+        flat: 'B606',
+        description:
+          'All type of hampers and giftings available for - wedding, birthday, return favour, anniversary, baby shower, house warming, corporate events etc.,',
+        phone: '7205815898',
+        whatsapp:
+          'https://wa.me/917205815898?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+        instagram:
+          'https://www.instagram.com/milkarsgifting/',
+      },
     ],
   };
 

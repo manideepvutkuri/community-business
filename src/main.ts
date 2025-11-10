@@ -8,9 +8,10 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { provideRouter, Routes } from '@angular/router';
-import { importProvidersFrom } from '@angular/core';
+import { importProvidersFrom, isDevMode } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { routes } from './app/app.routes';
+import { provideServiceWorker } from '@angular/service-worker';
 
 
 
@@ -35,7 +36,10 @@ bootstrapApplication(AppComponent, {
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideDatabase(() => getDatabase()),
-    provideStorage(() => getStorage()),
+    provideStorage(() => getStorage()), provideServiceWorker('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            registrationStrategy: 'registerWhenStable:30000'
+          }),
   ]
 })
   .catch((err) => console.error(err));

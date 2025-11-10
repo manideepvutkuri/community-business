@@ -9,11 +9,11 @@
 
 <div class="category-container">
   <div class="back-header">
-  <button class="back-btn" (click)="goBack()">
-    <i class="fa fa-arrow-left"></i> <!-- uses Font Awesome -->
-  </button>
-  <!-- <h3 class="page-title">{{ categoryName }}</h3> -->
-</div>
+    <button class="back-btn" (click)="goBack()">
+      <i class="fa fa-arrow-left"></i> <!-- uses Font Awesome -->
+    </button>
+    <!-- <h3 class="page-title">{{ categoryName }}</h3> -->
+  </div>
   <!-- <h1>{{ categoryName }} Sellers</h1> -->
 
   <div *ngIf="sellers.length > 0; else comingSoon" class="sellers-list">
@@ -24,51 +24,52 @@
           {{ seller.status === 'open' ? '🟢 Open Today' : '🔴 Closed Today' }}
         </span> -->
       </div>
-<p class="seller-owner" *ngIf="seller.owner && seller.flat">
-  {{ seller.owner }} - {{ seller.flat }}
-</p>
+      <p class="seller-owner" *ngIf="seller.owner && seller.flat">
+        {{ seller.owner }} - {{ seller.flat }}
+      </p>
 
 
- <p *ngIf="seller.description" class="seller-desc">{{ seller.description }} <a *ngIf="seller.fullMessage" href="#" (click)="openDetails(seller); $event.preventDefault()">See details</a></p>
+      <p *ngIf="seller.description" class="seller-desc">{{ seller.description }} <a *ngIf="seller.fullMessage" href="#"
+          (click)="openDetails(seller); $event.preventDefault()">See details</a></p>
 
- <div *ngIf="seller.sections">
-      <div *ngFor="let section of seller.sections" class="section">
-        <div class="section-header" (click)="toggleSection(section)">
-          <h4>{{ section.name }}</h4>
-          <span>{{ section.expanded ? '▲' : '▼' }}</span>
-        </div>
+      <div *ngIf="seller.sections">
+        <div *ngFor="let section of seller.sections" class="section">
+          <div class="section-header" (click)="toggleSection(section)">
+            <h4>{{ section.name }}</h4>
+            <span>{{ section.expanded ? '▲' : '▼' }}</span>
+          </div>
 
-        <div class="section-content" *ngIf="section.expanded">
-          <table *ngIf="section.items && section.items.length">
-            <thead *ngIf="section.headers">
-              <tr>
-                <th>Item</th>
-                <th *ngFor="let head of section.headers">{{ head }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let item of section.items">
-                <td>{{ item.name }}</td>
-                <td *ngFor="let price of item.prices">{{ price ?  price : '-' }}</td>
-                <!-- <td *ngFor="let price of item.prices">{{ price ? '₹' + price : '-' }}</td> -->
-                 
-              </tr>
-            </tbody>
-          </table>
+          <div class="section-content" *ngIf="section.expanded">
+            <table *ngIf="section.items && section.items.length">
+              <thead *ngIf="section.headers">
+                <tr>
+                  <th>Item</th>
+                  <th *ngFor="let head of section.headers">{{ head }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of section.items">
+                  <td>{{ item.name }}</td>
+                  <td *ngFor="let price of item.prices">{{ price ? price : '-' }}</td>
+                  <!-- <td *ngFor="let price of item.prices">{{ price ? '₹' + price : '-' }}</td> -->
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
 
-  <!-- Scrollable travel packages -->
-  <div class="scroll-packages" *ngIf="seller.packages?.length">
-    <div class="chip" *ngFor="let place of seller.packages">{{ place }}</div>
-  </div>
+      <!-- Scrollable travel packages -->
+      <div class="scroll-packages" *ngIf="seller.packages?.length">
+        <div class="chip" *ngFor="let place of seller.packages">{{ place }}</div>
+      </div>
 
 
       <ul class="items">
         <li *ngFor="let item of seller.items">
           <span class="item-name">{{ item.name }}</span>
-          <span *ngIf="item.price" class="price">₹{{ item.price }}</span>
+          <span *ngIf="item.price" class="price">{{ item.price }}</span>
         </li>
       </ul>
 
@@ -89,22 +90,23 @@
           <i class="fab fa-whatsapp"></i>
         </button> -->
         <div class="action-buttons">
-            <a *ngIf="seller.phone" [href]="'tel:' + seller.phone" class="btn-icon call-btn">
-    <i class="fa-solid fa-phone"></i>
-  </a>
-  <a *ngIf="seller.whatsapp" [href]="seller.whatsapp" target="_blank" class="btn-icon whatsapp-btn">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
+          <a *ngIf="seller.phone" [href]="'tel:' + seller.phone" class="btn-icon call-btn">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+          <a *ngIf="seller.whatsapp" [href]="seller.whatsapp" target="_blank" class="btn-icon whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
           <a *ngIf="seller.instagram" [href]="seller.instagram" target="_blank" class="btn-icon instagram-btn">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
-  <a *ngIf="seller.website" [href]="seller.website" target="_blank" class="btn-icon website-btn">
-    <i class="fa-solid fa-globe"></i>
-  </a></div>
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a *ngIf="seller.website" [href]="seller.website" target="_blank" class="btn-icon website-btn">
+            <i class="fa-solid fa-globe"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
-    <!-- Coming Soon Message -->
+  <!-- Coming Soon Message -->
   <ng-template #comingSoon>
     <div class="coming-soon">
       <i class="fas fa-hourglass-half"></i>

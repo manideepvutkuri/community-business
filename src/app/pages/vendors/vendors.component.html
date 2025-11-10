@@ -1,0 +1,97 @@
+<div class="vendors-container">
+    <div class="header">
+        <div class="back-header">
+            <button class="back-btn" (click)="goBack()">
+                <i class="fa fa-arrow-left"></i>
+            </button>
+        </div>
+        <div>
+
+            <h5 class="main-header">3rd Party Vendors Directory</h5>
+            <h6 class="subtitle">Below are the vendors who worked earlier in our community. This data has been collected
+                from community's vendor details group</h6>
+        </div>
+    </div>
+
+    <!-- Filters Section -->
+    <div class="filters-section">
+        <div class="filter-group">
+            <label for="search">
+                <i class="icon">🔍</i>
+                Search
+            </label>
+            <input id="search" type="text" [(ngModel)]="searchTerm" (ngModelChange)="onSearchChange()"
+                placeholder="Search by name, phone, or description..." class="search-input" />
+        </div>
+
+        <div class="filter-group">
+            <label for="service">
+                <i class="icon">🏷️</i>
+                Service Type
+            </label>
+            <select id="service" [(ngModel)]="selectedService" (ngModelChange)="onServiceChange()"
+                class="service-select">
+                <option value="all">All Services</option>
+                <option *ngFor="let service of services" [value]="service">
+                    {{ service }}
+                </option>
+            </select>
+        </div>
+
+        <button class="clear-btn" (click)="clearFilters()" [disabled]="searchTerm === '' && selectedService === 'all'">
+            Clear Filters
+        </button>
+    </div>
+
+    <!-- Results Count -->
+    <div class="results-info">
+        <span class="count">{{ filteredVendors.length }} vendor(s) found</span> <span class="link"><a
+                href="https://forms.gle/wa4qjwoSnQ7zvkLA8" target="_blank" class="link">Want to Suggest a
+                Vendor?</a></span>
+    </div>
+
+    <!-- Loading State -->
+    <div *ngIf="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Loading vendors...</p>
+    </div>
+
+    <!-- Vendors Table -->
+    <div *ngIf="!loading" class="table-container">
+        <table class="vendors-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Service</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let vendor of filteredVendors; let i = index">
+                    <td class="name-cell">
+                        <span class="vendor-name">{{ vendor.name }}</span>
+                    </td>
+                    <td class="phone-cell">
+                        <a [href]="'tel:' + vendor.phone" class="phone-link">
+                            📞 {{ vendor.phone }}
+                        </a>
+                    </td>
+                    <td class="service-cell">
+                        <span class="service-badge">{{ vendor.service }}</span>
+                    </td>
+                    <td class="description-cell">
+                        {{ vendor.description }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- No Results -->
+        <div *ngIf="filteredVendors.length === 0" class="no-results">
+            <div class="no-results-icon">😔</div>
+            <h3>No vendors found</h3>
+            <p>Try adjusting your search criteria or filters</p>
+        </div>
+    </div>
+</div>

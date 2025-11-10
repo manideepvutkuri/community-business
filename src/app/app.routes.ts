@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SellerDashboardComponent } from './pages/seller-dashboard/seller-dashboard.component';
 import { CategoryViewComponent } from './pages/category-view/category-view.component';
 import { CategoryComponent } from './pages/category/category.component';
+import { VendorsComponent } from './pages/vendors/vendors.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,4 +20,5 @@ export const routes: Routes = [
   // { path: 'login', component: LoginComponent },
   { path: 'seller-dashboard', component: SellerDashboardComponent },
   { path: 'category/:name', component: CategoryViewComponent },
+  { path: 'vendors', component: VendorsComponent },
 ];

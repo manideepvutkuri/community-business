@@ -1,30 +1,58 @@
+<div class="home-container">
+ 
+<nav class="navigation-header">
+        <a routerLink="/vendors" (click)="navigateTo3rdVendor()" class="vendors-link">
+          📋 View 3rd Party Vendors
+        </a>
+      </nav>
 
- <div class="home-container">
-  <!-- <header class="header" *ngIf="user">
-    <div class="user-info">
-      <p>👋 Welcome, <strong>{{ user.name }}</strong> (Flat {{ user.flatNo }})</p>
-      <button class="logout-btn" (click)="logout()">Logout</button>
+  <!-- Chrome iOS Notice -->
+  <div class="browser-notice" *ngIf="isChromeiOS">
+    <div class="notice-content">
+      <span class="notice-icon">ℹ️</span>
+      <p>For best experience, please open this app in <strong>Safari</strong> to install it on your home screen.</p>
     </div>
-  </header> -->
+  </div>
+
+  <!-- PWA Install Prompt -->
+  <div class="install-prompt" *ngIf="showInstallPrompt">
+    <div class="install-content">
+      <button class="close-btn" (click)="closeInstallPrompt()">✕</button>
+      <div class="install-icon">📱</div>
+      
+      <!-- Android Install -->
+      <div *ngIf="!isIosDevice">
+        <h3>Install Fyben App</h3>
+        <p>Get the full app experience! Install Fyben on your device for quick access.</p>
+        <button class="install-btn" (click)="installPwa()">
+          <span>⬇️ Install Now</span>
+        </button>
+      </div>
+      
+      <!-- iOS Install Instructions -->
+      <div *ngIf="isIosDevice" class="ios-instructions">
+        <h3>Add to Home Screen</h3>
+        <p>Install this app on your iPhone:</p>
+        <ol>
+          <li>Tap the Share button <span class="ios-icon">⬆️</span></li>
+          <li>Scroll and tap "Add to Home Screen"</li>
+          <li>Tap "Add" to confirm</li>
+        </ol>
+      </div>
+    </div>
+  </div>
 
   <main class="main-content">
-    <!-- <h1>Welcome to Your Community App <span class="wave">👋</span></h1> -->
-    <!-- <p class="subtitle">Select a service to explore</p> -->
-
-<div class="header fade-in-up">
-  <h1 class="main-header">Discover What’s Around You with <span class="brand">Fyben</span></h1>
-  <p class="subtext">Together, let’s grow and support our community.</p>
-</div>
+    <h1 class="main-header">Hi <span class="wave">👋</span>, Welcome to Our Community App <span class="brand">Fyben</span></h1>
+    <div class="header fade-in-up">
+      <p class="subtext">A single stop for all our community Businesses.Together, let's grow and support our community.</p>
+    </div>
 
 
 
 
     <div class="categories">
-      <div
-        class="category-card"
-        *ngFor="let cat of categories"
-        (click)="navigateToCategory(cat)"
-      >
+      <div class="category-card" *ngFor="let cat of categories" (click)="navigateToCategory(cat)">
         <div class="card-image">
           <img [src]="cat.image" alt="{{ cat.name }}" />
         </div>
@@ -44,10 +72,15 @@
       Want to register your business? Click here →
     </a>
   </p>
-   <p>
+  <p>
     <a href="https://forms.gle/BRsxNULygpRaSQi9A
     " target="_blank">
       Want to share feedback/suggestions? Click here →
     </a>
   </p>
 </footer>
+
+
+<!-- Onboarding ===> https://docs.google.com/forms/d/1VtciNvHSN41JBNHRCRZFrwlZyfnm_dpBa5IwhSRiVIs/edit#response=ACYDBNgUWXmexeFG9xXuoN7cfidmIue9s5sTt2eeEW3ToWHYyIep2vbP4H208yuWFNBm6zo
+Feedback ===> https://docs.google.com/forms/d/1bNYyKWPawKm66mhdOykZh7Da-EGXnLGJQrsFH9mOg40/edit#responses
+Suggestions ===> https://docs.google.com/forms/d/1qZx_f3jmRg4DkYgk9pwTWOHGibMzMYth_897zHqua6M/edit#responses -->

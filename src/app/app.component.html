@@ -1,4 +1,7 @@
 
+<!-- Welcome Modal - Shows on first visit -->
+<app-welcome-modal *ngIf="showWelcomeModal" (closed)="showWelcomeModal = false"></app-welcome-modal>
+
 <!-- <nav style="padding: 10px; background: #f0f0f0;">
   <a routerLink="/">Home</a> |
   <a routerLink="/register">Register</a> |

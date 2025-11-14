@@ -118,10 +118,35 @@
     "phone": "+919581623881",
     "service": "TV Installation",
     "description": "— CCTV fitter : Manikantha — 📞 +91 95816 23881. He does camera installation and wiring."
-  },{
-    "name":"sasi photographer",
-    "phone":"9059061403",
-    "service":"Photography",
-    "description":"for any photography work you can contact Sasi"
+  },
+  {
+    "name": "sasi photographer",
+    "phone": "9059061403",
+    "service": "Photography",
+    "description": "for any photography work you can contact Sasi"
+  },
+  {
+    "name": "Ajay Granite",
+    "phone": "+919704143828",
+    "service": "Granite",
+    "description": ""
+  },
+  {
+    "name": "Sandeep Tiles",
+    "phone": "+919398918673",
+    "service": "Tiles",
+    "description": ""
+  },
+  {
+    "name": "Ramulu Core Cutting",
+    "phone": "+919346673177",
+    "service": "Drilling / Core Cutting",
+    "description": "Ramulu Core Cutting with reasonable price, if required can contact him."
+  },
+   {
+    "name": "Srinivas Medplus",
+    "phone": "+9963893161",
+    "service": "Pharmacy",
+    "description": "Medplus home delivery"
   }
 ]

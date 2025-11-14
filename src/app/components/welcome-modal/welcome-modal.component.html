@@ -1,0 +1,52 @@
+<div class="modal-overlay" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <button class="close-btn" (click)="closeModal()">
+            <i class="fa fa-times"></i>
+        </button>
+
+        <div class="modal-header">
+            <h2>Hello Neighbour! 👋, Welcome to Fyben! 🎉</h2>
+        </div>
+
+        <div class="modal-body">
+            <p class="info-text"> Welcome to our Community Business Hub — a space created to bring all resident-run businesses and
+                services into one place.
+            </p>
+            <p class="info-text">
+                Whether you're looking for home-cooked food, classes for kids, fitness sessions, Flat sale or rent, or any
+                daily-need
+                service, you can explore everything right here with ease.
+
+            </p>
+            <p class="info-text">
+                We’ve also added a Blood Donor Section to help during unexpected emergencies. If you’re willing, please
+                consider registering — it could save a life.
+            </p>
+            <p class="info-text">
+                This platform is completely free, built to support and strengthen our community.
+                Discover. Connect. Support.
+            </p>
+            <div class="features">
+                <div class="feature-item">
+                    <i class="fa fa-store"></i>
+                    <span>Discover local vendors</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fa fa-share-alt"></i>
+                    <span>Share business pages</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fa fa-phone"></i>
+                    <span>Connect directly</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <span>Created and Maintained by Mahender Reddy Vutkuri(A1903)</span>
+            <button class="btn-primary" (click)="closeModal()">
+                Get Started
+            </button>
+        </div>
+    </div>
+</div>

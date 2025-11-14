@@ -1,7 +1,6 @@
-import { Component, Inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Inject, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
 import {
   MatDialog,
   MatDialogModule,
@@ -11,15 +10,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { VendorDataService } from '../../services/vendor-data.service';
 
 @Component({
-  selector: 'app-category',
+  selector: 'app-vendor-detail',
   standalone: true,
   imports: [CommonModule, MatDialogModule, MatButtonModule],
-  templateUrl: './category.component.html',
-  styleUrls: ['./category.component.scss'],
+  templateUrl: './vendor-detail.component.html',
+  styleUrl: './vendor-detail.component.scss'
 })
-export class CategoryComponent {
+export class VendorDetailComponent implements OnInit {
   categoryName = '';
-  sellers: any[] = [];
+  vendorId = '';
+  vendor: any = null;
+  currentUrl = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -31,54 +32,52 @@ export class CategoryComponent {
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
       this.categoryName = params.get('category') || '';
-      this.sellers = this.vendorDataService.getVendorsByCategory(this.categoryName);
+      this.vendorId = params.get('vendorId') || '';
+      
+      // Get the vendor using the shared service
+      this.vendor = this.vendorDataService.getVendorById(this.categoryName, this.vendorId);
+      
+      if (!this.vendor) {
+        // If vendor not found, navigate back to category
+        this.router.navigate(['/category', this.categoryName]);
+      }
     });
+    
+    // Get current URL for sharing
+    this.currentUrl = window.location.href;
   }
 
-  contactSeller(phone: string) {
-    window.open(`tel:${phone}`, '_self');
-  }
-
-  openWhatsApp(number: string) {
-    const msg = encodeURIComponent('Hello! I saw your shop on Fyben.');
-    window.open(`https://wa.me/91${number}?text=${msg}`, '_blank');
-  }
   goBack() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/category', this.categoryName]);
   }
+
   toggleSection(section: any) {
     section.expanded = !section.expanded;
   }
-  //   toggleSection(selectedSection: any) {
-  //   // Close all other sections
-  //   this.sellers.forEach(seller => {
-  //     seller.sections?.forEach((section: { expanded: boolean; }) => {
-  //       if (section !== selectedSection) {
-  //         section.expanded = false;
-  //       }
-  //     });
-  //   });
 
-  //   selectedSection.expanded = !selectedSection.expanded;
-  // }
-  openDetails(seller: any) {
+  openDetails(vendor: any) {
     this.dialog.open(DialogContentExampleDialog, {
-      data: seller,
+      data: vendor,
       width: '90%',
       maxWidth: '400px',
     });
   }
 
-  navigateToVendorDetail(seller: any, event?: Event) {
-    if (event) {
-      const target = event.target as HTMLElement;
-      if (target.closest('.action-buttons') || target.closest('a')) {
-        return;
-      }
+  shareVendor() {
+    const shareData = {
+      title: this.vendor.name,
+      text: `Check out ${this.vendor.name} on Fyben!`,
+      url: this.currentUrl,
+    };
+
+    if (navigator.share) {
+      navigator.share(shareData).catch((err) => console.log('Error sharing:', err));
+    } else {
+      // Fallback: copy to clipboard
+      navigator.clipboard.writeText(this.currentUrl).then(() => {
+        alert('Link copied to clipboard!');
+      });
     }
-    
-    const vendorId = this.vendorDataService.generateVendorId(seller.name);
-    this.router.navigate(['/category', this.categoryName, 'vendor', vendorId]);
   }
 
   // Extract name from format "Name (Phone)"

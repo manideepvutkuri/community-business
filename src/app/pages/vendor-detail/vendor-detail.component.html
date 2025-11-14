@@ -1,0 +1,112 @@
+<div class="vendor-detail-container" *ngIf="vendor">
+  <div class="back-header">
+    <button class="back-btn" (click)="goBack()">
+      <i class="fa fa-arrow-left"></i>
+    </button>
+    <button class="share-btn" (click)="shareVendor()">
+      <i class="fa fa-share-alt"></i> Share
+    </button>
+  </div>
+
+  <div class="vendor-card">
+    <div class="vendor-header">
+      <h1>{{ vendor.name }}</h1>
+    </div>
+    
+    <p class="vendor-owner" *ngIf="vendor.owner && vendor.flat">
+      {{ vendor.owner }} - {{ vendor.flat }}
+    </p>
+
+    <p *ngIf="vendor.description" class="vendor-desc">
+      {{ vendor.description }}
+      <a *ngIf="vendor.fullMessage" href="#" (click)="openDetails(vendor); $event.preventDefault()">
+        See details
+      </a>
+    </p>
+
+    <!-- Sections with items -->
+    <div *ngIf="vendor.sections">
+      <div *ngFor="let section of vendor.sections" class="section">
+        <div class="section-header" (click)="toggleSection(section)">
+          <h4>{{ section.name }}</h4>
+          <span>{{ section.expanded ? '▲' : '▼' }}</span>
+        </div>
+
+        <div class="section-content" *ngIf="section.expanded">
+          <table *ngIf="section.items && section.items.length">
+            <thead *ngIf="section.headers">
+              <tr>
+                <th>Item</th>
+                <th *ngFor="let head of section.headers">{{ head }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of section.items">
+                <td>{{ item.name }}</td>
+                <td *ngFor="let price of item.prices">{{ price ? price : '-' }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrollable travel packages -->
+    <div class="scroll-packages" *ngIf="vendor.packages?.length">
+      <div class="chip" *ngFor="let place of vendor.packages">{{ place }}</div>
+    </div>
+
+    <!-- Simple items list -->
+    <ul class="items" *ngIf="vendor.items?.length && vendor.dataKey !== 'Blooddonars'">
+      <li *ngFor="let item of vendor.items">
+        <span class="item-name">{{ item.name }}</span>
+        <span *ngIf="item.price" class="price">{{ item.price }}</span>
+      </li>
+    </ul>
+
+    <!-- Blood Donors Table -->
+    <div *ngIf="vendor.dataKey === 'Blooddonars'" class="blood-donors-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Blood Group</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of vendor.items">
+            <td>{{ extractName(item.name) }}</td>
+            <td>
+              <a [href]="'tel:' + extractPhone(item.name)" class="phone-link">
+                {{ extractPhone(item.name) }}
+              </a>
+            </td>
+            <td class="blood-group">{{ item.price && item.price[0] ? item.price[0] : '-' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="action-buttons">
+      <a *ngIf="vendor.phone" [href]="'tel:' + vendor.phone" class="btn-icon call-btn">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+      <a *ngIf="vendor.whatsapp" [href]="vendor.whatsapp" target="_blank" class="btn-icon whatsapp-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <a *ngIf="vendor.instagram" [href]="vendor.instagram" target="_blank" class="btn-icon instagram-btn">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a *ngIf="vendor.website" [href]="vendor.website" target="_blank" class="btn-icon website-btn">
+        <i class="fa-solid fa-globe"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!vendor" class="not-found">
+  <p>Vendor not found</p>
+  <button (click)="goBack()">Go Back</button>
+</div>

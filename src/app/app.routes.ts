@@ -11,11 +11,13 @@ import { SellerDashboardComponent } from './pages/seller-dashboard/seller-dashbo
 import { CategoryViewComponent } from './pages/category-view/category-view.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { VendorsComponent } from './pages/vendors/vendors.component';
+import { VendorDetailComponent } from './pages/vendor-detail/vendor-detail.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'category/:category', component: CategoryComponent },
+  { path: 'category/:category/vendor/:vendorId', component: VendorDetailComponent },
   // { path: 'register', component: RegisterComponent },
   // { path: 'login', component: LoginComponent },
   { path: 'seller-dashboard', component: SellerDashboardComponent },

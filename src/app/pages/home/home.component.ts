@@ -85,10 +85,10 @@ export class HomeComponent {
       status: 'open',
     },
     {
-      name: 'Rentals',
+      name: 'Rentals or Sales',
       dataKey: 'Rentals',
       image: 'https://i.ibb.co/27FDzjR1/h.png',
-      availableText: '1 vendor Available',
+      availableText: '2 vendors Available',
       status: 'open',
     },
     {
@@ -103,7 +103,7 @@ export class HomeComponent {
       dataKey: 'Organic',
       image:
         'https://i.ibb.co/ycGCcvC2/organic-sticker-label-badge-logo-black-white-ecology-icon-495897-272.jpg',
-      availableText: '1 vendor Available',
+      availableText: '2 vendors Available',
       status: 'open',
     },
     {
@@ -138,7 +138,7 @@ export class HomeComponent {
       name: 'Blood Donars',
       dataKey: 'Blooddonars',
       image: 'https://i.ibb.co/nNjCmt78/2871439-1.png',
-      availableText: '1 Donor Available',
+      availableText: '4 Donors Available',
       status: 'open',
     },
     {
@@ -159,6 +159,20 @@ export class HomeComponent {
       dataKey: 'GiftingCorner',
       image: 'https://i.ibb.co/TxwdG2r6/gift.jpg',
       availableText: '1 Vendor Available',
+      status: 'open',
+    },
+    {
+      name: 'Yoga & Meditation',
+      dataKey: 'Meditation',
+      image: 'https://i.ibb.co/LdcGzTzk/m.png',
+      availableText: '1 Service Available',
+      status: 'open',
+    },
+    {
+      name: 'Real Estate',
+      dataKey: 'RealEstate',
+      image: 'https://i.ibb.co/39qXYx3C/real-estate.jpg',
+      availableText: '1 Service Available',
       status: 'open',
     },
   ];

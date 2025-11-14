@@ -78,9 +78,9 @@ Thank you all for your continued love and support! ❤️`,
               { name: 'Chicken Curry', prices: ['₹450', '₹750'] },
               { name: 'Mutton Curry', prices: ['₹800', '₹1500'] },
               { name: 'Prawn Curry', prices: ['₹700', '₹1500'] },
-              { name: 'Chicken fry', prices: ['-', '-'] },
-              { name: 'Mutton Curry', prices: ['-', '-'] },
-              { name: 'Prawn Curry', prices: ['-', '-'] },
+              { name: 'Chicken Fry', prices: ['-', '-'] },
+              { name: 'Mutton Fry', prices: ['-', '-'] },
+              { name: 'Prawn Fry', prices: ['-', '-'] },
             ],
           },
           {
@@ -639,7 +639,7 @@ Whether you’re searching for your dream home or a smart investment opportunity
 We take pride in serving our valued customers round the clock, 24/7, 365 days a year.
 
 Please feel free to share our details with your friends or colleagues who are exploring property options in Hyderabad.`,
-        website: 'www.vibrantpropmart.com',
+        website: 'http://www.vibrantpropmart.com',
         phone: '9705401575',
         whatsapp:
           'https://wa.me/919705401575?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',

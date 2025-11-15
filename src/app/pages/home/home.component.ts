@@ -175,6 +175,13 @@ export class HomeComponent {
       availableText: '1 Service Available',
       status: 'open',
     },
+    {
+      name: 'Sports',
+      dataKey: 'Sports',
+      image: 'https://i.ibb.co/39qXYx3C/real-estate.jpg',
+      availableText: '1 Sport Available',
+      status: 'open',
+    },
   ];
   user: any = null;
   navigateToCategory(category: any) {

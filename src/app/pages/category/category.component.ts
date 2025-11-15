@@ -10,6 +10,9 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { VendorDataService } from '../../services/vendor-data.service';
 
+declare var gtag: Function;
+
+
 @Component({
   selector: 'app-category',
   standalone: true,
@@ -35,13 +38,23 @@ export class CategoryComponent {
     });
   }
 
-  contactSeller(phone: string) {
-    window.open(`tel:${phone}`, '_self');
+  contactSeller(user: any) {
+    gtag('event', 'contact_seller', {
+      event_label: 'phone_call',
+      value: user.phone,
+      name: this.extractName(user.name),
+    });
+    window.open(`tel:${user.phone}`, '_self');
   }
 
-  openWhatsApp(number: string) {
-    const msg = encodeURIComponent('Hello! I saw your shop on Fyben.');
-    window.open(`https://wa.me/91${number}?text=${msg}`, '_blank');
+  openWhatsApp(user: any) {
+    gtag('event', 'contact_seller_whatsapp', {
+      event_label: 'whatsapp',
+      value: user.phone,
+      name: this.extractName(user.name),
+    });
+    // const msg = encodeURIComponent('Hello! I saw your shop on Fyben.');
+    // window.open(`https://wa.me/91${user.phone}?text=${msg}`, '_blank');
   }
   goBack() {
     this.router.navigate(['/home']);
@@ -78,6 +91,12 @@ export class CategoryComponent {
     }
     
     const vendorId = this.vendorDataService.generateVendorId(seller.name);
+    gtag('event', 'open_vendor_detail', {
+      // event_category: 'navigation',
+      // event_label: this.categoryName,
+      vendor_id: vendorId,
+      vendor_name: seller.name
+    });
     this.router.navigate(['/category', this.categoryName, 'vendor', vendorId]);
   }
 

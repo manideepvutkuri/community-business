@@ -178,11 +178,15 @@ export class HomeComponent {
     {
       name: 'Sports',
       dataKey: 'Sports',
-      image: 'https://i.ibb.co/39qXYx3C/real-estate.jpg',
+      image: 'https://i.ibb.co/HftwnSJ2/sports-brand-logo-vector-19-666870-2797-1.png',
       availableText: '1 Sport Available',
       status: 'open',
     },
   ];
+
+ 
+
+
   user: any = null;
   navigateToCategory(category: any) {
     this.trackCategoryClick(category.name);

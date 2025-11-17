@@ -40,33 +40,48 @@ Please call or message us by 12:00 PM (noon) for dinner pre-orders.
 📦 Sunday Special:
 We prepare bulk orders every Sunday in our kitchen!
 
+🍽️ Menu Update (Important)
+
+We respectfully want to inform you about a small change in our menu.
+
+Earlier, we used to offer single-plate options, which were enough only for one person. But many of our customers requested portions that serve two people.
+
+✨ So, from now on:
+
+❌ Single-plate concept is removed
+
+✅ Orders will now be accepted from ½ kg to 5 kg
+
+
+This helps us maintain quality as a home kitchen and also serve you better.
+
+We kindly request your support and understanding.🙏Please check and order as per our new menu chart.
+
 Thank you all for your continued love and support! ❤️`,
         sections: [
           {
             name: '🍲 Biryanis',
             expanded: false,
             headers: [
-              'Single (250g)',
-              'Mini (300g)',
               'Full (Half KG)',
               'Family Pack (1 KG)',
             ],
             items: [
               {
                 name: 'Chicken Biryani',
-                prices: ['₹250', '₹400', '₹800', '₹1600'],
+                prices: ['₹800', '₹1600'],
               },
               {
                 name: 'Mutton Biryani',
-                prices: ['₹400', '₹800', '₹1600', '₹2500'],
+                prices: ['₹1600', '₹2500'],
               },
               {
                 name: 'Prawn Biryani',
-                prices: ['₹350', '₹550', '₹1100', '₹1650'],
+                prices: ['₹1100', '₹1650'],
               },
               {
                 name: 'Vegetable Biryani',
-                prices: ['₹190', '₹380', '₹500', '₹1200'],
+                prices: ['₹500', '₹1200'],
               },
             ],
           },
@@ -448,6 +463,26 @@ Healthy Bites, Happy Life!`,
         phone: '9494200690',
         whatsapp:
           'https://wa.me/9494200690?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+      },
+      {
+        name: 'Flat Resale - A1308 ',
+        status: 'open',
+        owner: 'Vamsi Krishna',
+        flat: 'A1308',
+        description: 'Flat Available for Sale in Candeur 40',
+        phone: '8275696889',
+        whatsapp:
+          'https://wa.me/918275696889?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+      },
+        {
+        name: 'Flat Resale - A3108 ',
+        status: 'open',
+        owner: 'Rambabu',
+        flat: 'A3108',
+        description: 'EAST FACING CORNER 2 BHK FLAT WITH 1256 SFT',
+        phone: '9848153777',
+        whatsapp:
+          'https://wa.me/919848153777?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
       },
       {
         name: 'Flat Resale - B2704',

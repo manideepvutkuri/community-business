@@ -67,8 +67,8 @@ export class HomeComponent {
       name: 'Stitching',
       dataKey: 'Stitching',
       image: 'https://i.ibb.co/vxjv7yj9/s.png',
-      availableText: 'not available',
-      status: 'closed',
+      availableText: '1 vendor Available',
+      status: 'open',
     },
     {
       name: 'Pickles',
@@ -88,7 +88,7 @@ export class HomeComponent {
       name: 'Rentals or Sales',
       dataKey: 'Rentals',
       image: 'https://i.ibb.co/27FDzjR1/h.png',
-      availableText: '2 vendors Available',
+      availableText: '5 vendors Available',
       status: 'open',
     },
     {

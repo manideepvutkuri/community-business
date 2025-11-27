@@ -172,6 +172,28 @@ Thank you all for your continued love and support! ❤️`,
         ],
       },
     ],
+     Stitching: [
+      {
+        name: 'Sree Vaibhav collections',
+        status: 'open',
+        owner: 'Chavana swapna',
+        flat: 'B-3307',
+        description: 'We specialize in stitching dresses, blouses, and long frocks, along with offering a curated collection of sarees and ready-to-wear dresses',
+         fullMessage: `Sree Vaibhav Collections is a trusted boutique with 20+ years of expertise in custom stitching and ethnic fashion. We specialize in stitching dresses, blouses, and long frocks, along with offering a curated collection of sarees and ready-to-wear dresses. With a strong focus on quality and perfect fitting, we serve customers both offline and online through Amazon, Flipkart, and Meesho.`,
+        phone: '9182884042',
+        whatsapp:
+          'https://wa.me/+919182884042?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+        items: [
+          { name: ' Blouse Stitching' },
+          { name: 'Dress Stitching' },
+          { name: 'Saree Stitching' },
+          {
+            name: 'Saree Sales',
+          },
+            { name: 'Dress Sales' },
+        ],
+      },
+    ],
     Pickels: [
       {
         name: 'Yuva Nilayam Foods',
@@ -514,6 +536,30 @@ Healthy Bites, Happy Life!`,
           { name: 'Price: 1.49 Cr ( slightly negotiable )' },
         ],
       },
+       {
+        name: 'Flat Rental',
+        status: 'open',
+        owner: 'Ramesh Kumar',
+        flat: 'B2006',
+        description: `Flat B-2006, 2.5 BHK (West facing) available for rent from Dec 1, 2025`,
+        phone: '8712802769',
+        whatsapp:
+          'https://wa.me/918712802769?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+        items: [
+          { name: '👨‍🍳 Full modular kitchen with chimney ' },
+          {
+            name: '🛏️ 3 bedrooms and 2 toilets ',
+          },
+          {
+            name: '📺 TV Unit',
+          },
+          { name: 'Wardrobes in all bed rooms' },
+          { name: '🕉️Pooja room with profile glass door' },
+          { name: '☢️5 fans ' },
+          { name: '❄️2 Geysers  ' },
+          { name: ' 🕊️3 Balconies & 1 utility' },
+        ],
+      }
     ],
     Handlooms: [
       {

@@ -175,13 +175,6 @@ export class HomeComponent {
       availableText: '1 Service Available',
       status: 'open',
     },
-    {
-      name: 'Sports',
-      dataKey: 'Sports',
-      image: 'https://i.ibb.co/HftwnSJ2/sports-brand-logo-vector-19-666870-2797-1.png',
-      availableText: '1 Sport Available',
-      status: 'open',
-    },
   ];
 
  

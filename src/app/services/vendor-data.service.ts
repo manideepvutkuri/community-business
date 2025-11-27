@@ -726,32 +726,6 @@ Please feel free to share our details with your friends or colleagues who are ex
           'https://wa.me/919705401575?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
       },
     ],
-    Sports: [
-      {
-        name: 'Cricket Tournament',
-        status: 'open',
-        owner: 'Bharath Mankani',
-        flat: 'B2508',
-        description: `Friends Cricket League S-35. Starts from Nov 23rd at Gandimaisama. Below are a few Highlights. For more info contact Bharath.`,
-        website: '',
-        phone: '9966113747',
-        whatsapp:
-          'https://wa.me/919966113747?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
-        items: [
-          { name: 'Sunday Pool' },
-          { name: '8 Teams' },
-          { name: '3 Cup Format' },
-          { name: 'Live with 360 degree camera' },
-          { name: 'Refreshments' },
-          { name: 'MVP of the Tourney' },
-          { name: 'Best Bowler of the Tourney' },
-          { name: 'Best Batsman of the Tourney' },
-          { name: 'Best Fielder of the Tourney' },
-          { name: 'Most Sixes of the Tourney' },
-          { name: 'Most Fours of the Tourney' },
-        ],
-      },
-    ],
   };
 
   getVendorsByCategory(category: string): any[] {

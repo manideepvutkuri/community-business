@@ -180,13 +180,14 @@ Thank you all for your continued love and support! ❤️`,
         flat: 'B-3307',
         description: 'We specialize in stitching dresses, blouses, and long frocks, along with offering a curated collection of sarees and ready-to-wear dresses',
          fullMessage: `Sree Vaibhav Collections is a trusted boutique with 20+ years of expertise in custom stitching and ethnic fashion. We specialize in stitching dresses, blouses, and long frocks, along with offering a curated collection of sarees and ready-to-wear dresses. With a strong focus on quality and perfect fitting, we serve customers both offline and online through Amazon, Flipkart, and Meesho.`,
-        phone: '9182884042',
+        phone: '9494304737',
         whatsapp:
-          'https://wa.me/+919182884042?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+          'https://wa.me/+919494304737?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+           instagram: 'https://instagram.com/srivaibhavcollections',
         items: [
           { name: ' Blouse Stitching' },
           { name: 'Dress Stitching' },
-          { name: 'Saree Stitching' },
+          { name: 'Saree Fall Stitching' },
           {
             name: 'Saree Sales',
           },

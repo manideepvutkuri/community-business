@@ -53,7 +53,7 @@ export class HomeComponent {
       name: 'Sweets',
       dataKey: 'Sweets',
       image: 'https://i.ibb.co/WNbGp7M3/sw.png',
-      availableText: '2 Vendor Available',
+      availableText: '2 Vendors Available',
       status: 'open',
     },
     {

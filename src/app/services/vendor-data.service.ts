@@ -177,7 +177,7 @@ Thank you all for your continued love and support! ❤️`,
         owner: 'Lavanya Bandaru',
         flat: 'A2008',
         description: 'We ensure the purest quality by exclusively using pure desi ghee',
-        fullMessage: `*✨️Indulge in our selection of truly tasty and homemade traditional sweets, crafted without any preservatives or artificial colours. We ensure the purest quality by exclusively using pure desi ghee in every item, delivering rich, authentic flavours right to your doorstep.*✨️`,
+        fullMessage: `✨️Indulge in our selection of truly tasty and homemade traditional sweets, crafted without any preservatives or artificial colours. We ensure the purest quality by exclusively using pure desi ghee in every item, delivering rich, authentic flavours right to your doorstep.✨️`,
         phone: '9966509089',
         whatsapp:
           'https://wa.me/+919966509089?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',

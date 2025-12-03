@@ -88,7 +88,7 @@ export class HomeComponent {
       name: 'Rentals or Sales',
       dataKey: 'Rentals',
       image: 'https://i.ibb.co/27FDzjR1/h.png',
-      availableText: '5 vendors Available',
+      availableText: '6 vendors Available',
       status: 'open',
     },
     {

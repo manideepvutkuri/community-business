@@ -585,6 +585,29 @@ Healthy Bites, Happy Life!`,
           { name: '❄️2 Geysers  ' },
           { name: ' 🕊️3 Balconies & 1 utility' },
         ],
+      },
+
+       {
+        name: 'Flat Rental - B3504',
+        status: 'open',
+        owner: 'Surya Krishna Anand Kale ',
+        flat: 'B3504',
+        description: `My Flat Block B 3504 is available for rent from 15th Jan 2025.`,
+        phone: '9908903330',
+        whatsapp:
+          'https://wa.me/919908903330?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+        items: [
+          { name: ' The monthly rent is ₹50,000 (slightly negotiable). ' },
+          {
+            name: '2.5 BHK semi-furnished apartment',
+          },
+          {
+            name: 'If you’d like to visit or need more details, please feel free to contact us on the numbers below.',
+          },
+          { name: 'Mr P N Prasad 8332815749 (owner of Block C 1504)' },
+          { name: 'Mr K Unni Krishnan 9989398564' },
+         
+        ],
       }
     ],
     Handlooms: [

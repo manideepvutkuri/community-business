@@ -35,6 +35,13 @@ export class HomeComponent {
       availableText: '2 vendors Available',
       status: 'open',
     },
+      {
+      name: 'Rice',
+      dataKey: 'Rice',
+      image: 'https://i.ibb.co/JWTcbqCT/rice.jpg',
+      availableText: '1 vendors Available',
+      status: 'open',
+    },
     {
       name: 'Travel',
       dataKey: 'Travel',

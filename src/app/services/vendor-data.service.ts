@@ -775,6 +775,28 @@ Please feel free to share our details with your friends or colleagues who are ex
           'https://wa.me/919705401575?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
       },
     ],
+     Rice: [
+      {
+        name: 'JAI SREE RAM RICE',
+        status: 'open',
+        owner: 'Mahender Reddy',
+        flat: 'A1903',
+        description:
+          'Pure Farm-Grown Rice – Limited Stock',
+        phone: '9010161680',
+        // whatsapp: '8499989189',
+        whatsapp:
+          'https://wa.me/919010161680?text=Hi%20I%20saw%20your%20ad%20on%20Fyben!',
+       
+        items: [
+          { name: `Freshly harvested from our own agricultural land, Jai Sree Ram Rice brings you pure, chemical-free, and naturally grown rice with authentic taste and quality.` },
+          { name: 'We currently have only 5 quintals available — direct from farm to home with no mixing or polishing.' },
+          { name: `Price: ₹6,000 per quintal` },
+          { name: `Stock: Very limited – first-come, first-serve` },
+          { name: `If you prefer clean, fresh, and naturally produced rice, this is the best choice for your family.
+Share with friends or relatives looking for pure farm-quality rice.` },
+        ],
+      },]
   };
 
   getVendorsByCategory(category: string): any[] {

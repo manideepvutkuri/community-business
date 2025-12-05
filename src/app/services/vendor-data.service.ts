@@ -792,6 +792,12 @@ Please feel free to share our details with your friends or colleagues who are ex
           { name: `Freshly harvested from our own agricultural land, Jai Sree Ram Rice brings you pure, chemical-free, and naturally grown rice with authentic taste and quality.` },
           { name: 'We currently have only 5 quintals available — direct from farm to home with no mixing or polishing.' },
           { name: `Price: ₹6,000 per quintal` },
+            { 
+    name: `Price for 50kg:  ₹3,000` 
+  },
+  { 
+    name: `Price for 25kg:  ₹1,500` 
+  },
           { name: `Stock: Very limited – first-come, first-serve` },
           { name: `If you prefer clean, fresh, and naturally produced rice, this is the best choice for your family.
 Share with friends or relatives looking for pure farm-quality rice.` },
